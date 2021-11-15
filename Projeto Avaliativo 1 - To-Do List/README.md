@@ -18,6 +18,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Desenvolver uma aplicação web de lista de afazeres (“to-do list”).
 
+🔗 Teste o funcionamento da aplicação pelo link: https://nervous-ride-97406f.netlify.app/
+
 ## Requisitos
 - [x] Ter um favicon.
 - [x] Um campo de texto para digitar o nome de uma nova atividade a ser adicionada à lista.
