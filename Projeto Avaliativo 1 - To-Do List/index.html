@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Avaliativo 1 - To-Do List</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/icons8-shortcuts.svg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="cabecalho">
+            <h1>Lista de Afazeres </h1>
+        </header>
+        <form>
+            <div id="erro">&nbsp;</div>
+            <input type="text" id="inputTexto" required pattern="[0-9-a-zA-Záãéõó\s]+$"
+                placeholder="Digite aqui a descrição da tarefa ..." autocomplete="off">
+            <button type="button" id="btnAdicionar">Adicionar</button>
+        </form>
+        <ul id="listaUl"></ul>
+    </div>
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

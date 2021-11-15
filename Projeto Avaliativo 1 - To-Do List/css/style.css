@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(161, 248, 248);
+}
+
+.cabecalho {
+    text-align: center;
+    font-size: 30px;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+    width: 800px;
+    margin: 0 auto;
+    background-color: aliceblue;
+    height: 100vmin;
+}
+
+#erro {
+    color: red;
+    font-size: px;
+}
+
+#inputTexto {
+    border: 1px solid rgb(150, 147, 147);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 8px;
+    width: 80%;
+    font-size: 16px;
+}
+
+#btnAdicionar {
+    cursor: pointer;
+    padding: 6px;
+    transition: 1s;
+    outline: none;
+    font-size: 16px;
+    font-weight: 800;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#btnAdicionar:hover {
+    background: rgba(46, 133, 46, 1);
+}
+
+#listaUl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 20px;
+}
+
+#listaUl li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    font-size: 24px;
+    padding: 5px;
+}
+
+#listaUl li:hover {
+    background-color: rgb(161, 248, 248);
+}
+
+ul li:nth-child(even) {
+    background: gainsboro;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+ul li i.fas.fa-trash {
+    cursor: pointer;
+    color: darkgray;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+}
