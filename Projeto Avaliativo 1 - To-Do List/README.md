@@ -35,6 +35,5 @@ Desenvolver uma aplicação web de lista de afazeres (“to-do list”).
 <div>
   <img src="./github/lista.jpeg " alt="layout-web" height="225">
   <img src="./github/Listas.gif" alt="demo-web" height="225">
-
 </div>
 

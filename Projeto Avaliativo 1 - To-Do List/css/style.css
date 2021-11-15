@@ -1,26 +1,26 @@
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: sans-serif;
     background-color: rgb(161, 248, 248);
+    font-family: sans-serif;
 }
 
 .cabecalho {
-    text-align: center;
     font-size: 30px;
+    text-align: center;
 }
 
 .container {
-    text-align: center;
-    padding: 50px;
-    width: 800px;
-    margin: 0 auto;
     background-color: aliceblue;
-    height: 100vmin;
+    height: 190vmin;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+    width: 800px;
 }
 
 #erro {
@@ -32,22 +32,22 @@ body {
     border: 1px solid rgb(150, 147, 147);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    font-size: 16px;
     padding: 8px;
     width: 80%;
-    font-size: 16px;
 }
 
 #btnAdicionar {
-    cursor: pointer;
-    padding: 6px;
-    transition: 1s;
-    outline: none;
-    font-size: 16px;
-    font-weight: 800;
     background-color: lightgray;
     border: 1px solid lightgray;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 800;
+    outline: none;
+    padding: 6px;
+    transition: 1s;
 }
 
 #btnAdicionar:hover {
@@ -55,20 +55,20 @@ body {
 }
 
 #listaUl {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     position: relative;
     top: 20px;
 }
 
 #listaUl li {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 80%;
+    display: flex;
     font-size: 24px;
+    justify-content: space-between;
     padding: 5px;
+    width: 80%;
 }
 
 #listaUl li:hover {
@@ -84,11 +84,21 @@ ul li:nth-child(even) {
 }
 
 ul li i.fas.fa-trash {
-    cursor: pointer;
     color: darkgray;
+    cursor: pointer;
 }
 
 .checkbox {
-    width: 20px;
     height: 20px;
+    width: 20px;
+}
+
+.footer {
+    background-color: rgb(161, 248, 248);
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
 }
