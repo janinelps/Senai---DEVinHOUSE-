@@ -1,9 +1,9 @@
 import PropTypes from "prop-types"
 
-export const Repository = ({titulo, descricao, destacar}) => {
+export const Repository = ({ titulo, descricao, destacar }) => {
     return <article>
         <h3>{titulo}</h3>
-        <span>O que é Lorem Ipsum?</span>
+        {destacar && <span>O que é Lorem Ipsum?</span>}
         <p>{descricao}</p>
     </article>
 }
