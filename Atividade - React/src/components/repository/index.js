@@ -1,7 +1,15 @@
-export const Repository = () => {
+import PropTypes from "prop-types"
+
+export const Repository = ({titulo, descricao, destacar}) => {
     return <article>
-        <h3>Lorem Ipsum </h3>
+        <h3>{titulo}</h3>
         <span>O que é Lorem Ipsum?</span>
-        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+        <p>{descricao}</p>
     </article>
+}
+
+Repository.propTypes = {
+    titulo: PropTypes.string.isRequired,
+    descricao: PropTypes.string,
+    destacar: PropTypes.bool
 }
