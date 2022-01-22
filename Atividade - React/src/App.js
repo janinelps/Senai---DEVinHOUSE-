@@ -6,23 +6,23 @@ import styles from './components/styles.module.css'
 function App() {
   const lista_repositorios = [{
     id: 1,
-    titulo: "Titulo 1 - Lorem Ipsum",
+    titulo: "Titulo",
     descricao: "É simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI"
   }, {
     id: 2,
-    titulo: "Titulo 2 - Lorem Ipsum",
+    titulo: "Titulo",
     descricao: "Quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos."
   }, {
     id: 3,
-    titulo: "Titulo 3",
+    titulo: "Titulo",
     descricao: " É simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI"
   }, {
     id: 4,
-    titulo: "Titulo 4",
+    titulo: "Titulo",
     descricao: "Quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos."
   }, {
     id: 5,
-    titulo: "Titulo 5",
+    titulo: "Titulo",
     descricao: "É simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI"
   },
   ]
@@ -37,19 +37,17 @@ function App() {
       <div className='grid'>
         <Summary img={'https://github.com/janinelps.png'} nome={'NOME'} />
 
-
-        <ul>
-          <Repository titulo={'Lorem Ipsum'} descricao={'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.'} destacar={true} />
-          {lista_repositorios.map(evento => {
-            return (
-              <li className={styles.repository} key={evento.id}>
-                <li>{evento.id}-{evento.titulo}</li>
-                <li>{evento.descricao}</li>
+        <Repository titulo={'Lorem Ipsum'} descricao={'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.'} destacar={true} />
+        {lista_repositorios.map(evento => {
+          return (
+            <article className={styles.repository}>
+              <li className={styles.grid} key={evento.id}>
+                <p>{evento.id}-{evento.titulo}</p>
+                <p>{evento.descricao}</p>
               </li>
-            )
-          })}
-
-        </ul >
+            </article >
+          )
+        })}
       </div >
     </div >
   );

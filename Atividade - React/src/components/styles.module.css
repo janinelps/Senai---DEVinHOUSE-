@@ -1,9 +1,7 @@
 .header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     background-color: brown;
-    display: flex;
-    flex-direction: column;
-    justify-items: end;
+    padding: 10px 0 0 10px;
+
 }
 
 .foto {
@@ -15,11 +13,19 @@
     margin-left: 70px;
 }
 
-.repository, .descricao, .repository {
-    align-items: center;
-    background-color: rgb(193, 163, 219);
+.repository, .descricao {
     padding: 0 20px;
     text-align: center;
+    list-style: none;
+}
+
+.repository {
+    border: solid 2px rgba(20, 20, 20, 0.1);
+    ;
+}
+
+.repository:hover, .descricao:hover {
+    background-color: rgb(94, 94, 100);
 }
 
 .destacar {
