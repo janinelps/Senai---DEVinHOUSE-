@@ -1,12 +1,12 @@
 import React, { useRef } from 'react';
-import { useMmo } from '../../contexts/Mmo/useMmo';
-import { Jogo } from '../Jogo';
+import { useJogo } from '../../contextos/Jogo/useJogo';
+import { CardJogo } from '../CardJogo';
 
-import styles from './Mmo.module.css';
+import styles from './Jogo.module.css';
 
-export const Mmo = () => {
+export const Jogos = () => {
     const elementoTopo = useRef();
-    const { mmoFiltrados } = useMmo();
+    const { jogosFiltrados } = useJogo();
 
     const handleVoltarAoTopo = () => {
         elementoTopo.current.scrollIntoView({ behavior: 'smooth' });
@@ -15,10 +15,9 @@ export const Mmo = () => {
     return (
         <div ref={elementoTopo} className={styles.container}>
             <div>
-                {console.log(mmoFiltrados)}
-                {mmoFiltrados.length === 0
-                    ? 'Nenhum Mmo encontrado'
-                    : mmoFiltrados.map((mmo) => <Jogo key={mmo.id} mmo={mmo} />)}
+                {jogosFiltrados.length === 0
+                    ? 'Nenhum jogo encontrado'
+                    : jogosFiltrados.map((jogo) => <CardJogo key={jogo.id} jogo={jogo} />)}
             </div>
             <button onClick={handleVoltarAoTopo}>Voltar para o topo</button>
         </div>

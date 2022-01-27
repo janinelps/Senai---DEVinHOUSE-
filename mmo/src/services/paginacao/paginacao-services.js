@@ -1,9 +1,9 @@
-import { useMmo } from '../../contexts/Mmo';
-import styles from '../Mmo/Mmo.module.css';
+import { useJogo } from '../../contextos/Jogo';
+import styles from '../Jogo/Jogo.module.css';
 
 export const Paginacao = () => {
-    const { pagina, mmoFiltrados, mmo, setPagina } = useMmo();
-    const qtdMaximaPaginas = Math.ceil(mmo.current.length / 40);
+    const { pagina, jogosFiltrados, jogo, setPagina } = useJogo();
+    const qtdMaximaPaginas = Math.ceil(jogo.current.length / 40);
 
     const handlePagAnterior = async () => {
         setPagina((pagAtual) => (pagAtual > 1 ? pagAtual - 1 : 1));
@@ -16,7 +16,7 @@ export const Paginacao = () => {
     return (
         <div className={styles.container}>
             <div className={styles.sectionTitle}>
-                <h1 className={styles.pageTitle}>Todos os mmo ({mmoFiltrados.length})</h1>
+                <h1 className={styles.pageTitle}>Todos os jogo ({jogosFiltrados.length})</h1>
                 <div className={styles.pagination}>
                     <button className={styles.pageButton} onClick={handlePagAnterior}>
                         {`<`}

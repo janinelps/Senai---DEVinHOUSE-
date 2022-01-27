@@ -1,6 +1,6 @@
 export const filtrarListaPorTermoDeBusca = (lista, termo) => {
-    return lista.filter((mmo) => {
-        return new RegExp(termo, 'ig').test(mmo.name);
+    return lista.filter((jogo) => {
+        return new RegExp(termo, 'ig').test(jogo.name);
     });
 };
 

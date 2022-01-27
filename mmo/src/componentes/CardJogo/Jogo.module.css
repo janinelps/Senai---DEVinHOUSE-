@@ -24,19 +24,6 @@
     font-weight: bold;
 }
 
-/* 
-.jogo__spec-value--fire {
-    color: #ff8744;
-}
-
-.jogo__spec-value--rock {
-    color: #727272;
-}
-
-.jogo__spec-value--grass {
-    color: #727272;
-} */
-
 .thumbnail {
     width: 100%;
     overflow: hidden;
@@ -54,8 +41,18 @@
     margin: 1rem 0;
 }
 
-.mmoPropertyItem {
+.jogoPropriedadeItem {
     display: inline-block;
     margin: 0 0.2rem;
     color: #333;
+}
+
+.button {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: green;
+
 }
