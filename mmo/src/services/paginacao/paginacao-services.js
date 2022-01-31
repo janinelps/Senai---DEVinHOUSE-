@@ -14,8 +14,8 @@ export const Paginacao = () => {
     };
 
     return (
-        <div className="container">
-            <div className="sectionTitle">
+        <div>
+            <div>
                 <h1>Todos os jogo ({jogosFiltrados.length})</h1>
                 <div >
                     <button onClick={handlePagAnterior}>

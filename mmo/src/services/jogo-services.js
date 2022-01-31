@@ -1,6 +1,6 @@
 export const fetchAllJogos = async (cmp) => {
     try {
-        const response = await fetch(process.env.REACT_APP_URL + '/' + cmp, {
+        const response = await fetch(process.env.REACT_APP_URL + cmp, {
             method: 'GET',
             headers: {
                 "x-rapidapi-host": process.env.REACT_APP_HOST,
@@ -8,7 +8,7 @@ export const fetchAllJogos = async (cmp) => {
             },
         });
         const listaJogos = await response.json();
-        console.log(listaJogos)
+
         return listaJogos;
     } catch (error) {
         console.error(error.message)

@@ -2,8 +2,6 @@ import React, { useRef } from 'react';
 import { useJogo } from '../../contextos/Jogo/useJogo';
 import { CardJogo } from '../CardJogo';
 
-import styles from './Jogo.module.css';
-
 export const Jogos = () => {
     const elementoTopo = useRef();
     const { jogosFiltrados } = useJogo();
@@ -13,7 +11,7 @@ export const Jogos = () => {
     };
 
     return (
-        <div ref={elementoTopo} className={styles.container}>
+        <div ref={elementoTopo}>
             <div>
                 {jogosFiltrados.length === 0
                     ? 'Nenhum jogo encontrado'

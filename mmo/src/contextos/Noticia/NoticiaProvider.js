@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
+import { Noticia } from '../../componentes/Noticia/Noticias';
 
 import { fetchAllJogos } from '../../services/jogo-services';
 import { NoticiaContext } from './NoticiaContext';
 
-export const NoticiaProvider = ({ children }) => {
+export const NoticiaProvider = () => {
     // const [termoBusca, setTermoBusca] = useState('');
     // const [noticiaFiltrados, setNoticiaFiltrados] = useState([]);
     const [pagina, setPagina] = useState(1);
@@ -12,7 +13,7 @@ export const NoticiaProvider = ({ children }) => {
     useEffect(() => {
 
         (async () => {
-            const lista = await fetchAllJogos('latestnews');
+            const lista = await fetchAllJogos('/latestnews');
             setNoticia((l) => l = lista)
         })();
     }
@@ -22,7 +23,7 @@ export const NoticiaProvider = ({ children }) => {
     console.log(noticia)
     return (
         <NoticiaContext.Provider value={{ noticiaFiltrados: noticia, pagina, setPagina }}>
-            {children}
+            <Noticia />
         </NoticiaContext.Provider>
     );
 };

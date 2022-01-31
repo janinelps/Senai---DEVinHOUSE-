@@ -1,3 +1,5 @@
+// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useJogo } from "../../contextos/Jogo/useJogo";
 
 export const Header = () => {
@@ -5,6 +7,10 @@ export const Header = () => {
 
     return (
         <div>
+            <div>
+                <Link to='noticia'>NOTICIA</Link>
+            </div>
+
             <input
                 onChange={(evento) => {
                     setBusca(evento.target.value)

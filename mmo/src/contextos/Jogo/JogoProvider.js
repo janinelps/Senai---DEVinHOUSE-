@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
+import { Header } from '../../componentes/Header/Header';
+import { Jogos } from '../../componentes/Jogos';
 import { filtrarListaPorPagina, filtrarListaPorTermoDeBusca } from '../../helper/filtraJogo';
 import { fetchAllJogos } from '../../services/jogo-services';
+import { Paginacao } from '../../services/paginacao/paginacao-services';
 import { JogoContext } from './JogoContext';
 
-export const JogoProvider = ({ children }) => {
-    const [termoBusca, setTermoBusca] = useState('');
+export const JogoProvider = () => {
+    const [busca, setBusca] = useState('');
     const [jogosFiltrados, setJogosFiltrados] = useState([]);
     const [pagina, setPagina] = useState(1);
     const jogo = useRef([]);
@@ -12,27 +15,27 @@ export const JogoProvider = ({ children }) => {
     useEffect(() => {
 
         (async () => {
-
-            const lista = await fetchAllJogos('games');
-
+            const lista = await fetchAllJogos('/games');
             jogo.current = lista;
             setJogosFiltrados(filtrarListaPorPagina(jogo.current, pagina));
-        })();
+        })()
     }
         // eslint-disable-next-line
         , []);
 
     useEffect(() => {
-        setJogosFiltrados(filtrarListaPorTermoDeBusca(jogo.current, termoBusca));
-    }, [termoBusca]);
+        setJogosFiltrados(filtrarListaPorTermoDeBusca(jogo.current, busca));
+    }, [busca]);
 
     useEffect(() => {
         setJogosFiltrados(filtrarListaPorPagina(jogo.current, pagina));
     }, [pagina]);
 
     return (
-        <JogoContext.Provider value={{ setTermoBusca, jogo, jogosFiltrados, pagina, setPagina }}>
-            {children}
+        <JogoContext.Provider value={{ setBusca, jogo, jogosFiltrados, pagina, setPagina }}>
+            <Header />
+            <Paginacao />
+            <Jogos />
         </JogoContext.Provider>
     );
 };
