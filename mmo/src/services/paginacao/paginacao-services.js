@@ -1,5 +1,11 @@
 import { useJogo } from '../../contextos/Jogo';
+import {
+    Container,
+    SectionTitle,
+    PageTitle,
+    Pagination,
 
+} from './paginacao.styles';
 
 export const Paginacao = () => {
     const { pagina, jogosFiltrados, jogo, setPagina } = useJogo();
@@ -14,10 +20,10 @@ export const Paginacao = () => {
     };
 
     return (
-        <div>
-            <div>
-                <h1>Todos os jogo ({jogosFiltrados.length})</h1>
-                <div >
+        <Container >
+            <SectionTitle>
+                <PageTitle>Todos os jogos ({jogosFiltrados.length})</PageTitle>
+                <Pagination>
                     <button onClick={handlePagAnterior}>
                         {`<`}
                     </button>
@@ -27,8 +33,8 @@ export const Paginacao = () => {
                     <button onClick={handleProxPagina}>
                         {`>`}
                     </button>
-                </div>
-            </div>
-        </div >
+                </Pagination>
+            </SectionTitle>
+        </Container >
     );
 };

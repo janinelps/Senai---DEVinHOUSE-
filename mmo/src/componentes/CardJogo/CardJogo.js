@@ -1,20 +1,27 @@
 import { Link } from 'react-router-dom';
 import { JogoPropriedadeItem } from './JogoPropriedadeItem';
+import {
+  Title,
+  Card,
+  Thumbnail,
+  Description,
+  Button,
+} from './Jogo.styles';
 
 export const CardJogo = ({ jogo }) => {
   return (
-    <div key={jogo.id}>
-      <div >
+    <Card key={jogo.id}>
+      <Thumbnail >
         <img src={jogo.thumbnail} alt={jogo.title} />
-      </div>
-      <h2 >{jogo.title}</h2>
-      <Link to={`detalhe/${jogo.id}`} >
-        <button type='button'>Mais informações...</button>
-      </Link>
-      <div >
+      </Thumbnail>
+      <Title >{jogo.title}</Title>
+      <Description >
         <JogoPropriedadeItem descricaoJogo={jogo.short_description} />
-      </div>
-    </div >
+        <Link to={`detalhe/${jogo.id}`} >
+          <Button type='button'>Mais informações...</Button>
+        </Link>
+      </Description>
+    </Card >
   );
 };
 

@@ -1,14 +1,14 @@
-import styles from './Jogo.module.css';
+import {
+    CardDescItem,
+} from './Jogo.styles'
 
 export const JogoPropriedadeItem = ({ descricaoJogo }) => {
 
     return (
-        <div>
-            <div>
-                <span>
-                    {descricaoJogo}
-                </span>
-            </div>
-        </div>
+        <CardDescItem>
+            <span>
+                {descricaoJogo}
+            </span>
+        </CardDescItem>
     );
 };
