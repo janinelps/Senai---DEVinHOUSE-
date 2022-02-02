@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 *{
@@ -14,5 +14,23 @@ html{
 body{
     background-color: #efefef;
 }
+`
 
+export const Head = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: 20px;
+
+    a{
+        text-transform: uppercase;
+        margin: 10px;
+        text-decoration: none;
+  
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+        background: white;
+    }
+}  
 `

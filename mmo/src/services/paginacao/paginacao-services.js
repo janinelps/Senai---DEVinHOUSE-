@@ -5,7 +5,7 @@ import {
     PageTitle,
     Pagination,
 
-} from './paginacao.styles';
+} from '../services.styles';
 
 export const Paginacao = () => {
     const { pagina, jogosFiltrados, jogo, setPagina } = useJogo();

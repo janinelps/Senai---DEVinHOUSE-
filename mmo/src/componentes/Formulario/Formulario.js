@@ -1,5 +1,5 @@
 import { Field, Form, Formik } from "formik"
-
+import { FormInput, Button, Input, DivButton } from "./Formulario.styled";
 
 export const Formulario = () => {
 
@@ -20,18 +20,18 @@ export const Formulario = () => {
 
                 {({ isSubmitting, resetForm }) => (
                     < Form >
-                        <h3>Comentários</h3>
-                        <div>
-                            <Field name='nome' type='text' required placeholder='Nome Completo' />
-                            <Field name='email' type='email' required placeholder='E-mail' />
-                        </div>
-                        <div>
+                        <FormInput>
+                            <h3>Comentários</h3>
+                            <Input>
+                                <Field name='nome' type='text' required placeholder='Nome Completo' />
+                                <Field name='email' type='email' required placeholder='E-mail' />
+                            </Input>
                             <Field component="textarea" rows="10" required name='comentario' placeholder='Deixe seu comentario' />
-                        </div>
-
-                        <button type="submit" disabled={isSubmitting}>ENVIAR</button>
-                        <button type="button" disabled={isSubmitting} onClick={resetForm} >LIMPAR</button>
-
+                            <DivButton>
+                                <Button type="submit" disabled={isSubmitting}>ENVIAR</Button>
+                                <Button type="button" disabled={isSubmitting} onClick={resetForm} >LIMPAR</Button>
+                            </DivButton>
+                        </FormInput>
                     </Form>
                 )}
             </Formik>

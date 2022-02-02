@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { useJogo } from '../../contextos/Jogo/useJogo';
 import { CardJogo } from '../CardJogo';
+import { Card } from './Jogo.styled';
 
 export const Jogos = () => {
     const elementoTopo = useRef();
@@ -11,13 +12,13 @@ export const Jogos = () => {
     };
 
     return (
-        <div ref={elementoTopo}>
-            <div>
+        <>
+            <Card ref={elementoTopo}>
                 {jogosFiltrados.length === 0
                     ? 'Nenhum jogo encontrado'
                     : jogosFiltrados.map((jogo) => <CardJogo key={jogo.id} jogo={jogo} />)}
-            </div>
+            </Card>
             <button onClick={handleVoltarAoTopo}>Voltar para o topo</button>
-        </div>
+        </>
     );
 };

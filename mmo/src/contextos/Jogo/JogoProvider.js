@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { Header } from '../../componentes/Header/Header';
 import { Jogos } from '../../componentes/Jogos';
 import { filtrarListaPorPagina, filtrarListaPorTermoDeBusca } from '../../helper/filtraJogo';
 import { fetchAllJogos } from '../../services/jogo-services';
@@ -33,7 +32,6 @@ export const JogoProvider = () => {
 
     return (
         <JogoContext.Provider value={{ setBusca, jogo, jogosFiltrados, pagina, setPagina }}>
-            <Header />
             <Paginacao />
             <Jogos />
         </JogoContext.Provider>

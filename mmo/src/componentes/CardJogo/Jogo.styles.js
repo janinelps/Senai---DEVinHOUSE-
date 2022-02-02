@@ -1,17 +1,20 @@
 import styled from 'styled-components'
 
+export const Card = styled.div`
+  max-width: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background-color: white;
+  
+}
+`
+
 export const Title = styled.h4`
   color: #626262;
   font-size: 20px;
   text-align: left;
   font-weight: 700;
   margin-right: 20px;
-`
-export const Card = styled.div`
-  max-width: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  background-color: white;
 `
 
 export const Thumbnail = styled.div`

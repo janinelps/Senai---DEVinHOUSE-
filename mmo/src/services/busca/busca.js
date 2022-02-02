@@ -1,22 +1,14 @@
 // import { Link } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { useJogo } from "../../contextos/Jogo/useJogo";
-import {
-    Container,
-    Head,
-} from './Header.styles'
+import { BuscaContainer } from '../services.styles'
 
 
-export const Header = () => {
+export const Busca = () => {
     const { setBusca } = useJogo()
 
     return (
         <>
-            <Head>
-                <Link to='noticia'>Noticia</Link>
-                <Link to='/'>Jogos</Link>
-            </Head>
-            <Container>
+            <BuscaContainer>
                 <input
                     onChange={(evento) => {
                         setBusca(evento.target.value)
@@ -24,7 +16,7 @@ export const Header = () => {
                     type='text'
                     placeholder='Digite o nome do jogo'
                 ></input>
-            </Container>
+            </BuscaContainer>
         </>
     )
 }
